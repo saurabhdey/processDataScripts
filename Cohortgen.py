@@ -1,7 +1,7 @@
 ### Quick and dirty cohort data generator 
 ###
 ### This python script creates additional rows required for Cohort analysis for churned customers .  
-### The customer data in not the format required for Cohort analysis  - similar formats exist for e-commerce and other data  
+### The customer data in not the format required for Cohort analysis  - for ex. formats exist for e-commerce churn data  
 ### The logic takes into account group of customers and follows them through till they churn ( churn ) 
 ### till churn year they are 0 but the year when they churn they are flagged as 1 , additionally duration year is also calculated   
 ###  bad practice of using raw subscripts !!  but change later 
@@ -56,7 +56,7 @@ def CreateCohort(row):    						 # Function to calculate year wise cohorts to ac
                 Writecsv(row[0:16])
  #              print("record1")
 
-    elif row[7] in ("FOR","SUR","LPS","DTH","LF","PUR","RPL","TC","TE","NTO"):          # Check all types of terminations  
+    elif row[7] in ("FOR","SUR","LPS","DTH","LF","PUR","RPL","TC","TE","NTO"):          # Check all types of churn categories  
             
 #          print("recStart")
 #          row.extend([0,0])                     # Create the 16 and 17th columns to hold the churn variable and duration Year
