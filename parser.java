@@ -1,3 +1,6 @@
+/*
+Using the SAX parser to read through the full xml file(9GB) and extract the required values.
+*/ 
 import java.io.IOException;
 import java.io.InputStream;
 import org.xml.sax.Attributes;
