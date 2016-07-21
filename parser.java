@@ -44,23 +44,23 @@ public class Saxmode{
 			if (qName.equalsIgnoreCase("TestCode")){
 				String tc = attributes.getValue("tc");      
 				if (tc.equalsIgnoreCase("561")){
-					urinecotdone = true;
+					cotdone = true;
 			//		System.out.println("561");
 				}
 			}
-			if (urinecotdone){
+			if (cotdone){
 				if (qName.equalsIgnoreCase("QuantitativeResult")){
-					urinecotcheck1 = true;
+					cotcheck1 = true;
 				}
 			}
-			if (urinecotdone){
+			if (cotdone){
 				if (qName.equalsIgnoreCase("ProviderTestCode")){
-					urinecotcheck1 = true;
+					cotcheck1 = true;
 				}
 			}
-			if (urinecotdone){
+			if (cotdone){
 				if (qName.equalsIgnoreCase("ValueCode")||qName.equalsIgnoreCase("MeasureValue")){
-					urinecotvalue = true;
+					cotvalue = true;
 				}
 			}
 		}
