@@ -26,9 +26,9 @@ public class Saxmode{
 
 
 	public DefaultHandler handler = new DefaultHandler() {
-		boolean urinecotdone = false;
-		boolean urinecotcheck1 = false; 
-		boolean urinecotvalue = false ;
+		boolean cotdone = false;
+		boolean cotcheck1 = false; 
+		boolean cotvalue = false ;
 		boolean testdate = false; 
 		private String storedate = null ; 
 
@@ -43,9 +43,9 @@ public class Saxmode{
 				
 			if (qName.equalsIgnoreCase("TestCode")){
 				String tc = attributes.getValue("tc");      
-				if (tc.equalsIgnoreCase("561")){
+				if (tc.equalsIgnoreCase("XX1")){
 					cotdone = true;
-			//		System.out.println("561");
+			//		System.out.println("XX1");
 				}
 			}
 			if (cotdone){
@@ -81,15 +81,15 @@ public class Saxmode{
 			
 			//System.out.println("" + new String(ch, start, length));
 			// print the characters
-			if (urinecotvalue){
+			if (cotvalue){
 				output=null;
 			//	System.out.println("Finalvalue:" + new String(ch, start, length));
 				output = "" + new String(ch, start, length)+"," + storedate;
 				//	System.out.println("output:"+output);
 				storedate = null ;
-				urinecotdone = false;
-				urinecotcheck1 = false ;
-				urinecotvalue = false ;
+				cotdone = false;
+				cotcheck1 = false ;
+				cotvalue = false ;
 			}
 
 		}
