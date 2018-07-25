@@ -1,4 +1,4 @@
-### Quick and dirty cohort data generator 
+### This is a Cohort data generator .
 ###
 ### This python script creates additional rows required for Cohort analysis for churned customers .  
 ### The customer data in not the format required for Cohort analysis  - for ex. formats exist for e-commerce churn data  
